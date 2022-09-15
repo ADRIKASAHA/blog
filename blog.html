@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="position-absolute top-0 start-50 translate-middle" id="blog">SOME QUESTION</h1>
+    <div class="m-5 p-5 border bg-success p-2 text-dark bg-opacity-25 rounded"> 
+        <div>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <h3>
+                        1. What are the differences between Local Storage & Session Storage?
+                      </h3>
+                  <thead>
+                    <tr>
+                        <th></th>
+                        <th scope="col">Local Storage</th>
+                        <th scope="col">Session Storage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>The client can only read local storage.</td>
+                        <td>The client can only read local storage.</td>
+                    </tr>
+                    <tr >
+                        <th>2</th>
+                        <td>The storage capacity of local storage is 5MB-10MB.</td>
+                        <td>The storage capacity of session storage is 5MB.</td>
+                       
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>
+                            As it is not session-based, it must be deleted via javascript or
+                            manually.
+                        </td>
+                        <td>
+                            It’s session-based and works per window or tab. This means that
+                            data is stored only for the duration of a session, i.e., until
+                            the browser (or tab) is closed.
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>  
+        
+    </div>
+    <div class="m-5 p-5 border bg-success p-2 text-dark bg-opacity-25 rounded"> 
+        <div>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <h3>
+                        2. What are the differences between global scope & block scope?
+                      </h3>
+                  <thead>
+                    <tr>
+                        <th></th>
+                        <th scope="col">Global scope</th>
+                        <th scope="col">Block scope</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>
+                            The variables defined outside of any function or curly brackets
+                            are known as global variables and have global scope. Global
+                            scope means that the variables can be accessed from any part of
+                            that program, any function or conditional state can access that
+                            variable. .
+                          </td>
+                          <td>
+                            Block scope is also a sub-type of local scope. The block scope
+                            can be defined as the scope of the variables inside the curly
+                            brackets {}. Now, these curly brackets can be of loops, or
+                            conditional statements, or something else. You are only allowed
+                            to refer to these variables from within the curly brackets {}.
+                          </td>
+                    </tr>
+                    <tr >
+                        <th>2</th>
+                        <td>Can't access from anywhere.</td>
+                        <td>We can access it from anywhere.</td>
+                       
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>
+                            var name = "linuxHint";<br/> 
+                            function printName(){<br/>
+                                 console.log("This
+                            tutorial is by "+name);<br/> 
+                            } <br/>
+                            printName();
+                          </td>
+                          <td>function addition() { <br/>{ let a = 10; const b = 5; } <br/>}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>  
+        
+    </div>
+    <div class="m-5 p-5 border bg-success p-2 text-dark bg-opacity-25 rounded">
+        <h3>3. How many ways can we get undefined?</h3>
+        <ul class="list-group list-group-flush ">
+          <div class=" rounded">
+            <li class="list-group-item bg-success p-2 text-dark bg-opacity-10"><h5>Accessing a non-existing property</h5>
+            
+            let favoriteMovie = { title: 'Blade Runner' }; <br />
+            favoriteMovie.actors; // => undefined
+            <br />
+            </li>
+            <li class=" bg-success p-2 text-dark bg-opacity-10 list-group-item"><h5>Uninitialized variable</h5>
+            
+                let myVariable; <br />
+                myVariable; // => undefined
+                <br /></li>
+            <li class="bg-success p-2 text-dark bg-opacity-10 list-group-item"><h5>Function parameters</h5>
+            
+                function multiply(a, b) { a; // => 5 b; // => undefined <br />
+                    return a * b; } <br />
+                    multiply(5); // => NaN
+                    <br /></li>
+            <li class="bg-success p-2 text-dark bg-opacity-10 list-group-item"><h5>Void operator</h5>
+            
+                void 1; // => undefined void (false); // => undefined
+          <br />
+          void {name: 'John Smith'}; // => undefined
+          <br />
+          void Math.min(1, 3); // => undefined <br />
+          <span class="fw-bold">Undefined in arrays</span>
+          <br />
+          const colors = ['blue', 'white', 'red']; <br />
+          colors[5]; // => undefined <br />
+          colors[-1]; // => undefined <br /></li>
+            <li class="bg-success p-2 text-dark bg-opacity-10 list-group-item"><h5>Function parameters</h5>
+            
+                function multiply(a, b) { a; // => 5 b; // => undefined <br />
+                    return a * b; } <br />
+                    multiply(5); // => NaN
+                    <br /></li>
+          </div>
+          </ul>
+    </div>
+    <div class="m-5 p-5 border bg-success p-2 text-dark bg-opacity-25 rounded">
+        <h3>4. How does JS eventloop work?</h3>
+         <p><strong>javascript</strong> is an high level,
+            interpreted, single threaded non-blocking, asynchronous, concurrent
+            language.<br/>
+            A thread of execution is the smallest sequence of programmed
+          instruction that can be managed independently by a scheduler. A
+          programming language is single-threaded means it can only perform one
+          task or operation at a single time. This means it would execute an
+          entire process from start to end without the thread being interrupted
+          or stopped. Unlike multi-threaded languages where multiple processes
+          can be run on several threads concurrently without blocking each
+          other.There is no one definition of blocking; it just simply means things
+          that are running slowly on the thread. So non-blocking means things
+          that aren’t slow on the thread.
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
